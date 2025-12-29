@@ -23,6 +23,7 @@ public class CartItem {
     }
 
     public double getTotalPrice() {
-        return product.getPrice().doubleValue() * quantity;
+        // Return unit price (do not multiply by quantity for display total)
+        return product.getPrice().doubleValue();
     }
 }

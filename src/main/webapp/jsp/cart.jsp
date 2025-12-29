@@ -247,7 +247,6 @@
         <tr>
             <th>Product Name</th>
             <th>Price</th>
-            <th>Quantity</th>
             <th>Total</th>
             <th>Action</th>
         </tr>
@@ -259,7 +258,6 @@
         <tr>
             <td><strong><%= item.getProduct().getName() %></strong></td>
             <td class="price">$<%= String.format("%.2f", item.getProduct().getPrice()) %></td>
-            <td class="quantity"><%= item.getQuantity() %></td>
             <td class="price"><strong>$<%= String.format("%.2f", item.getTotalPrice()) %></strong></td>
             <td>
                 <a href="cart?action=remove&id=<%= item.getProduct().getId() %>" class="btn-danger">

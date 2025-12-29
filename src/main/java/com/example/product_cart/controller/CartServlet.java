@@ -41,6 +41,14 @@ public class CartServlet extends HttpServlet {
                 cart.clear();
             }
 
+            // If an action was performed that changed cart state, redirect to
+            // the cart page without parameters to avoid re-applying the action
+            // when the user refreshes the page (prevents duplicate increments).
+            if (action != null) {
+                resp.sendRedirect(req.getContextPath() + "/cart");
+                return;
+            }
+
             req.getRequestDispatcher("/jsp/cart.jsp").forward(req, resp);
 
         } catch (Exception e) {
