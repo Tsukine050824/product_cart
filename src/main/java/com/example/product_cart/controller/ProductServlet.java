@@ -49,7 +49,7 @@ public class ProductServlet extends HttpServlet {
         }
     }
 
-    // 🔴 PHẦN BỊ THIẾU GÂY LỖI 405
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
